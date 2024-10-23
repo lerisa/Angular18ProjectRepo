@@ -1,0 +1,47 @@
+@import "../styles/gridbreakpoints.scss";
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "link"
+    "title"
+    "post-1"
+    "post-2"
+    "post-3";
+
+  @include tablet-desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title link"
+      "post-1 post-2"
+      "post-1 post-3";
+  }
+}
+
+.grid-title {
+  grid-area: title;
+}
+
+.grid-link {
+  grid-area: link;
+}
+
+.grid-post-1 {
+  grid-area: post-1;
+  border: 1px solid green;
+  background: green;
+}
+
+.grid-post-2 {
+  grid-area: post-2;
+  border: 1px solid yellow;
+  background: yellow;
+}
+
+.grid-post-3 {
+  grid-area: post-3;
+  border: 1px solid blue;
+  background: blue;
+}

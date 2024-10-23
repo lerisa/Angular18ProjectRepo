@@ -1,13 +1,41 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'sampleApp';
+
+  cards$ = of([
+    {
+      id: 1,
+      title: 'mmmmmmmmmm 1',
+      description: 'some description',
+    },
+    {
+      id: 2,
+      title: 'mmmmmmmmmm 2',
+      description: 'some description',
+    },
+    {
+      id: 3,
+      title: 'mmmmmmmmmm 3',
+      description: 'some description 3',
+    },
+  ]);
 }
+
+// title: p?.pageTitle,
+// url: `/${p?.slug}`,
+// imageUrl:
+//   p?.featuredImage?.webp ?? p?.featuredImage?.fallback ?? '',
+// displayImageAsBackground: true,
+// description: p?.description ?? '',
+// buttonLabel: 'Read more',
