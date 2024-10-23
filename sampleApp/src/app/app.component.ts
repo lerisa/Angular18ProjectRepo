@@ -31,11 +31,3 @@ export class AppComponent {
     },
   ]);
 }
-
-// title: p?.pageTitle,
-// url: `/${p?.slug}`,
-// imageUrl:
-//   p?.featuredImage?.webp ?? p?.featuredImage?.fallback ?? '',
-// displayImageAsBackground: true,
-// description: p?.description ?? '',
-// buttonLabel: 'Read more',
