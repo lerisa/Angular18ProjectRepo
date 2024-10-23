@@ -2,13 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { of } from 'rxjs';
-import { DesignationComponent } from './components/designation/designation.component';
-import { RolesComponent } from './components/roles/roles.component';
+import { MasterComponent } from './components/master/master.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, RolesComponent, DesignationComponent],
+  imports: [RouterOutlet, CommonModule, MasterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
