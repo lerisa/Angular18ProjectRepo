@@ -1,0 +1,13 @@
+Angular 17 Notes
+- from angular 17 all components are standalone
+-
+
+
+
+Angular 18 Notes
+
+- public folder instead of assets folder
+- instead of appmodule we have appConfig  in angular 18, just has providers
+
+swagger
+- api documentation website
