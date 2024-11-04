@@ -11,3 +11,8 @@ Angular 18 Notes
 
 swagger
 - api documentation website
+
+Anular 2
+constructor(private http: httpClient)
+Anular 18
+http = inject(httpClient)
