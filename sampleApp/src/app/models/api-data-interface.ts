@@ -1,7 +1,5 @@
-import { Role } from './role-interface';
-
-export interface ApiDataStructure {
+export interface ApiDataStructure<T> {
   message: string;
   result: boolean;
-  data: Role[];
+  data: T[];
 }
