@@ -8,6 +8,10 @@ Angular 18 Notes
 
 - public folder instead of assets folder
 - instead of appmodule we have appConfig  in angular 18, just has providers
+- // export const appConfig: ApplicationConfig = {
+  // providers: [
+  // provideHttpClient(), -> new (and we have to import it manually from @angular/common/http)
+  //httpClientModule is deprecated
 
 swagger
 - api documentation website
@@ -16,3 +20,4 @@ Anular 2
 constructor(private http: httpClient)
 Anular 18
 http = inject(httpClient)
+httpClientModule is there in here

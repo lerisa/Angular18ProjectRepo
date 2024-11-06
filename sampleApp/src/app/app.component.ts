@@ -12,6 +12,7 @@ import { MasterComponent } from './components/master/master.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  showCssGrid = false;
   title = 'sampleApp';
 
   cards$ = of([

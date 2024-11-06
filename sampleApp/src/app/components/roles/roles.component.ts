@@ -1,11 +1,29 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Role } from '../../models/role-interface';
+import { RolesService } from '../../services/roles.service';
 
 @Component({
   selector: 'app-roles',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './roles.component.html',
   styleUrl: './roles.component.scss',
 })
-export class RolesComponent {}
+export class RolesComponent implements OnInit {
+  rolesList: Role[] = [];
+
+  rolesService = inject(RolesService);
+
+  ngOnInit(): void {
+    console.log('getAllRoles');
+    this.getAllRoles();
+  }
+
+  getAllRoles(): void {
+    this.rolesService.getRoles().subscribe((data) => {
+      this.rolesList = data;
+    });
+  }
+}

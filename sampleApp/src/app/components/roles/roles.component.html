@@ -1,1 +1,30 @@
-<p>roles works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col p-5">
+      <select>
+        <option *ngFor="let role of rolesList" [value]="role.roleId">
+          {{ role.role }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table>
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Role Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let role of rolesList; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ role.role }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
