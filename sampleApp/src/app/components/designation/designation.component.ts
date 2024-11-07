@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { Designation } from '../../models/designation-interface';
+import { MasterService } from '../../services/master.service';
 
 @Component({
   selector: 'app-designation',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './designation.component.html',
-  styleUrl: './designation.component.scss'
+  styleUrl: './designation.component.scss',
 })
-export class DesignationComponent {
+export class DesignationComponent implements OnInit {
+  masterService = inject(MasterService);
+  designationList: Designation[] = [];
 
+  ngOnInit(): void {
+    this.getAllDesignations();
+  }
+
+  getAllDesignations(): void {
+    this.masterService.getDesignations().subscribe((data) => {
+      this.designationList = data;
+    });
+  }
 }

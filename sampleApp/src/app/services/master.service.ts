@@ -13,7 +13,7 @@ export class MasterService {
   getDesignations(): Observable<Designation[]> {
     return this.http
       .get<ApiDataStructure<Designation>>(
-        'https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllDesignations'
+        'https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllDesignation'
       )
       .pipe(map((response) => response.data));
   }
