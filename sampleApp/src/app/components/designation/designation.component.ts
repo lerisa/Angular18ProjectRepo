@@ -13,6 +13,7 @@ import { MasterService } from '../../services/master.service';
 export class DesignationComponent implements OnInit {
   masterService = inject(MasterService);
   designationList: Designation[] = [];
+  loadingStatus: boolean = true;
 
   ngOnInit(): void {
     this.getAllDesignations();
@@ -20,6 +21,7 @@ export class DesignationComponent implements OnInit {
 
   getAllDesignations(): void {
     this.masterService.getDesignations().subscribe((data) => {
+      this.loadingStatus = false;
       this.designationList = data;
     });
   }

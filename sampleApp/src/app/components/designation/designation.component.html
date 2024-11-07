@@ -1,5 +1,11 @@
 <div class="row">
-  @for (list of designationList; track $index) {
+  @if (loadingStatus) {
+  <div class="col">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  } @for (list of designationList; track $index) {
   <div class="col card p-5 m-1">
     <div class="card-body">
       <h5 class="card-title">{{ list.designation }}</h5>
