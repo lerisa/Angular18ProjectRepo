@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { ClientComponent } from './components/client/client.component';
+import { EmployeeComponent } from './components/employee/employee.component';
 import { MasterComponent } from './components/master/master.component';
 
 export const routes: Routes = [
@@ -10,5 +12,13 @@ export const routes: Routes = [
   {
     path: 'master',
     component: MasterComponent,
+  },
+  {
+    path: 'employee',
+    component: EmployeeComponent,
+  },
+  {
+    path: 'client',
+    component: ClientComponent,
   },
 ];
