@@ -17,7 +17,6 @@ export class RolesComponent implements OnInit {
   rolesService = inject(RolesService);
 
   ngOnInit(): void {
-    console.log('getAllRoles');
     this.getAllRoles();
   }
 
