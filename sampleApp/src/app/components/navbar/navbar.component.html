@@ -1,1 +1,32 @@
-navbar works
+<nav class="navbar">
+  <div class="container">
+    <a class="brand" routerLink="/">BNX Performance</a>
+    <button class="hamburger" (click)="toggleMenu()">
+      <span *ngIf="!menuOpen">☰</span>
+      <span *ngIf="menuOpen">X</span>
+    </button>
+    <div class="menu" [class.open]="menuOpen">
+      <ul class="nav-links">
+        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+        <li>
+          <a routerLink="/models" routerLinkActive="active"
+            >Ferrari Car Models</a
+          >
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#">Dropdown</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another Action</a></li>
+            <li><a href="#">Something Else</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
+      </ul>
+      <form class="search-form">
+        <input type="search" placeholder="Search" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
