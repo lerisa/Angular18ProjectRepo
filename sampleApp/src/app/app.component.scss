@@ -1,5 +1,11 @@
 @import "../styles/gridbreakpoints.scss";
 
+/* General Styling for Mobile (Default Styles) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .grid {
   display: grid;
   gap: 24px;
