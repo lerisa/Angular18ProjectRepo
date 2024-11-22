@@ -15,4 +15,17 @@ export class NavbarComponent {
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+
+  carModels = [
+    { id: 1, name: 'Ferrari 488 GTB' },
+    { id: 2, name: 'Ferrari F8 Tributo' },
+    { id: 3, name: 'Ferrari Roma' },
+    { id: 4, name: 'Ferrari Portofino M' },
+    { id: 5, name: 'Ferrari 812 Superfast' },
+    { id: 6, name: 'Ferrari GTC4Lusso' },
+    { id: 7, name: 'Ferrari LaFerrari' },
+    { id: 8, name: 'Ferrari SF90 Stradale' },
+    { id: 9, name: 'Ferrari Monza SP1' },
+    { id: 10, name: 'Ferrari Enzo' },
+  ];
 }

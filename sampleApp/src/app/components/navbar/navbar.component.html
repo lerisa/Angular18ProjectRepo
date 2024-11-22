@@ -14,13 +14,13 @@
           >
         </li>
         <li class="dropdown">
-          <a class="dropdown-toggle" href="#" routerLinkActive="active"
-            >Dropdown</a
-          >
+          <a class="dropdown-toggle" href="#">Ferrari Models</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another Action</a></li>
-            <li><a href="#">Something Else</a></li>
+            <li *ngFor="let model of carModels">
+              <a [routerLink]="['/car', model.id]" routerLinkActive="active">{{
+                model.name
+              }}</a>
+            </li>
           </ul>
         </li>
         <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
