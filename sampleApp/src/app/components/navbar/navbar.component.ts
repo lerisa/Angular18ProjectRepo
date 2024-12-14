@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +12,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class NavbarComponent {
   menuOpen = false;
+  cartService!: CartService;
+
+  constructor(cartService: CartService) {
+    this.cartService = cartService;
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;

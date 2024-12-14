@@ -1,1 +1,5 @@
-<p>part-details works!</p>
+<h1>{{ modelName }}</h1>
+<div *ngFor="let part of parts; let i = index">
+  <p>{{ part }} - £{{ prices[i] }}</p>
+  <button (click)="addToCart(modelName, part, prices[i])">Add to Cart</button>
+</div>
